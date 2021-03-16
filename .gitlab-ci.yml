@@ -1,0 +1,17 @@
+image: registry.gitlab.com/enehano-solutions/internal-projects/tools/sf/pipeline-template:2.1-7.60.0
+
+before_script:
+    ## repo
+    - git fetch -q
+
+stages:
+    - code-review
+
+Apex PMD:
+    artifacts:
+        paths: [gl-code-quality-report.json]
+        reports:
+            codequality: gl-code-quality-report.json
+    stage: code-review
+    script:
+        - /devops/runPmd.sh "force-app" "config/pmdRuleSet.xml" "$PMD_VERSION" "gl-code-quality-report.json"

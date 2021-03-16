@@ -1,0 +1,15 @@
+{
+	"recommendations": [
+		"salesforce.salesforcedx-vscode",
+		"redhat.vscode-xml",
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"chuckjonas.apex-pmd",
+		"forcecreators.apex-logs",
+		"eamodio.gitlens",
+		"mhutchie.git-graph",
+		"oblongmana.vscode-salesforce-doc-lookup",
+		"sanjayrathore.quick-salesforce-apex-class",
+		"drossi750.vscode-salesforce-toolkit"
+	]
+}

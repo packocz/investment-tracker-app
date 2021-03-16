@@ -1,0 +1,48 @@
+{
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/bower_components": true,
+		"**/.sfdx": true
+	},
+	"workbench.colorCustomizations": {
+		"activityBar.background": "#c4b52d",
+		"titleBar.activeBackground": "#b9b243",
+		"titleBar.activeForeground": "#F0FEF2"
+	},
+	"salesforcedx-vscode-lightning.activationMode": "always",
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[cmp]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[apex]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[trigger]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[page]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[evt]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"eslint.alwaysShowStatus": true,
+	"eslint.format.enable": true,
+	"editor.detectIndentation": false,
+	"editor.formatOnSave": true,
+    "apexPMD.runOnFileOpen": true,
+    "apexPMD.rulesets": [
+        "config/pmdRuleSet.xml"
+    ]
+}
