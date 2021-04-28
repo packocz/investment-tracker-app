@@ -1,0 +1,6 @@
+SELECT TargetRate__c, Name, LatestBalanceUpdate__c, InvestmentPlan__c, InvestedAmount__c, Id, 
+    EndDate__c, EarnedAmount__c, CurrentlyInvestedAmount__c, CurrentRoiPercentage__c, 
+    CurrentRoiAmount__c, CurrentBalance__c, CurrencyIsoCode, Coefficient__c,
+    InvestmentPlan__r.Name, InvestmentPlan__r.Id,
+    (SELECT Id, Name, CurrencyIsoCode, RecordTypeId, Investment__c, Amount__c, DateOfUpdate__c FROM InvestmentUpdates__r)
+FROM Investment__c

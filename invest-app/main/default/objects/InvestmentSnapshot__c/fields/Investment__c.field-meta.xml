@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Investment__c</fullName>
+    <externalId>false</externalId>
+    <label>Investment</label>
+    <referenceTo>Investment__c</referenceTo>
+    <relationshipLabel>Investment Snapshots</relationshipLabel>
+    <relationshipName>InvestmentSnapshots</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

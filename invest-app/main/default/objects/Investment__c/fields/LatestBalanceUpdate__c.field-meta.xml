@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LatestBalanceUpdate__c</fullName>
+    <description>The Date of the most recent Balance Update applied. Filled in automatically. Used to choose the current balance value for the Investment.</description>
+    <externalId>false</externalId>
+    <label>Latest Balance Update</label>
+    <summarizedField>InvestmentUpdate__c.DateOfUpdate__c</summarizedField>
+    <summaryFilterItems>
+        <field>InvestmentUpdate__c.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>Balance Update</value>
+    </summaryFilterItems>
+    <summaryForeignKey>InvestmentUpdate__c.Investment__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

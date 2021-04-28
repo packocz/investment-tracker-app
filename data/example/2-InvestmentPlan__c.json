@@ -1,0 +1,12 @@
+{
+	"records": [
+		{
+			"attributes": {
+				"type": "InvestmentPlan__c",
+				"referenceId": "InvestmentPlanRef1"
+			},
+			"Name": "Long Term Investment",
+			"CurrencyIsoCode": "CZK"
+		}
+	]
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EarnedAmount__c</fullName>
+    <description>All the money withdrawn from the Investment</description>
+    <externalId>false</externalId>
+    <label>Earned Amount</label>
+    <summarizedField>InvestmentUpdate__c.Amount__c</summarizedField>
+    <summaryFilterItems>
+        <field>InvestmentUpdate__c.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>Withdrawal</value>
+    </summaryFilterItems>
+    <summaryForeignKey>InvestmentUpdate__c.Investment__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

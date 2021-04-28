@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CurrentlyInvestedAmount__c</fullName>
+    <description>Money currently invested, i.e. all deposited less all withdrawn</description>
+    <externalId>false</externalId>
+    <label>Currently Invested Amount</label>
+    <summarizedField>InvestmentUpdate__c.Amount__c</summarizedField>
+    <summaryFilterItems>
+        <field>InvestmentUpdate__c.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>Deposit, Withdrawal</value>
+    </summaryFilterItems>
+    <summaryForeignKey>InvestmentUpdate__c.Investment__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>
