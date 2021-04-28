@@ -1,0 +1,37 @@
+{
+	"records": [
+		{
+			"attributes": {
+				"type": "CurrencyType",
+				"referenceId": "CurrencyTypeRef1"
+			},
+			"IsoCode": "CZK",
+			"ConversionRate": 1,
+			"DecimalPlaces": 2,
+			"IsActive": true,
+			"IsCorporate": true
+		},
+		{
+			"attributes": {
+				"type": "CurrencyType",
+				"referenceId": "CurrencyTypeRef2"
+			},
+			"IsoCode": "EUR",
+			"ConversionRate": 0.038,
+			"DecimalPlaces": 2,
+			"IsActive": true,
+			"IsCorporate": false
+		},
+		{
+			"attributes": {
+				"type": "CurrencyType",
+				"referenceId": "CurrencyTypeRef3"
+			},
+			"IsoCode": "USD",
+			"ConversionRate": 0.045767,
+			"DecimalPlaces": 2,
+			"IsActive": true,
+			"IsCorporate": false
+		}
+	]
+}

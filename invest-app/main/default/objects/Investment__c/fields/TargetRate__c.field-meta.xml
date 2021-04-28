@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TargetRate__c</fullName>
+    <description>The expected or target percentage rate. Either the declared rate of the product/platform or the set target to beat for manual investments. Will be used to indicate investment status.</description>
+    <externalId>false</externalId>
+    <label>Expected Return</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>
