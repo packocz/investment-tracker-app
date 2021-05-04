@@ -4,23 +4,6 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>dashboardName</name>
-                    <value>luXTHxPjaTkJGuvQFgPxAPnFzoLyDI</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>height</name>
-                    <value>400</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>hideOnError</name>
-                    <value>true</value>
-                </componentInstanceProperties>
-                <componentName>desktopDashboards:embeddedDashboard</componentName>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
                     <name>enableInlineEdit</name>
                     <value>true</value>
                 </componentInstanceProperties>
@@ -42,52 +25,30 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>pageSize</name>
-                    <value>20</value>
+                    <value>10</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:filterListCard</componentName>
             </componentInstance>
         </itemInstances>
-        <name>top</name>
-        <type>Region</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <name>bottomLeft</name>
-        <type>Region</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <name>bottomRight</name>
-        <type>Region</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>entityNames</name>
-                    <valueList>
-                        <valueListItems>
-                            <value>Investment__c</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>InvestmentPlan__c</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>InvestmentUpdate__c</value>
-                        </valueListItems>
-                    </valueList>
+                    <name>dashboardName</name>
+                    <value>luXTHxPjaTkJGuvQFgPxAPnFzoLyDI</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>maxRecords</name>
-                    <value>10</value>
+                    <name>hideOnError</name>
+                    <value>true</value>
                 </componentInstanceProperties>
-                <componentName>flexipage:recentItems</componentName>
+                <componentName>desktopDashboards:embeddedDashboard</componentName>
             </componentInstance>
         </itemInstances>
-        <name>sidebar</name>
+        <name>main</name>
         <type>Region</type>
     </flexiPageRegions>
-    <masterLabel>InvestmentsHome</masterLabel>
+    <masterLabel>InvestmentsHomePage</masterLabel>
     <template>
-        <name>home:desktopTemplate</name>
+        <name>runtime_commerce_oci:homeTemplateOneRegion</name>
     </template>
     <type>HomePage</type>
 </FlexiPage>
