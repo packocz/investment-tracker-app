@@ -73,7 +73,7 @@
                         <sortOrder>d</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Unrealised ROI</header>
+                <header>Potential Gain %</header>
                 <legendPosition>Bottom</legendPosition>
                 <report>InvestmentTracker/Investments</report>
                 <showPercentage>false</showPercentage>
@@ -110,7 +110,7 @@
                         <sortOrder>d</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Investments</header>
+                <header>Potential Gain</header>
                 <legendPosition>Bottom</legendPosition>
                 <report>InvestmentTracker/Investments</report>
                 <showPercentage>false</showPercentage>
@@ -137,7 +137,7 @@
                 <gaugeMax>10.0</gaugeMax>
                 <gaugeMin>0.0</gaugeMin>
                 <groupingSortProperties/>
-                <header>InvestmentPlan</header>
+                <header>Overall Performance</header>
                 <indicatorBreakpoint1>3.0</indicatorBreakpoint1>
                 <indicatorBreakpoint2>6.0</indicatorBreakpoint2>
                 <indicatorHighColor>#00716B</indicatorHighColor>
@@ -182,7 +182,7 @@
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>InvestmentDevelopment</header>
+                <header>Portfolio Value</header>
                 <legendPosition>Right</legendPosition>
                 <report>InvestmentTracker/InvestmentDevelopment</report>
                 <showPercentage>false</showPercentage>
@@ -223,7 +223,7 @@
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>InvestmentDevelopment</header>
+                <header>Potential Gain Over Time</header>
                 <legendPosition>Right</legendPosition>
                 <report>InvestmentTracker/InvestmentDevelopment</report>
                 <showPercentage>false</showPercentage>
@@ -239,7 +239,7 @@
     </dashboardGridLayout>
     <dashboardType>LoggedInUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <runningUser>test-uk9a3bf2dbdy@example.com</runningUser>
+    <runningUser>test-lnffkwwckuuj@example.com</runningUser>
     <textColor>#000000</textColor>
     <title>Investments</title>
     <titleColor>#000000</titleColor>
