@@ -1,0 +1,1115 @@
+{
+	"records": [
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef1"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef4",
+			"packocz__Amount__c": 2538,
+			"packocz__DateOfUpdate__c": "2021-04-25"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef2"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef1",
+			"packocz__Amount__c": 1750,
+			"packocz__DateOfUpdate__c": "2021-04-25"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef3"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef2",
+			"packocz__Amount__c": 2019,
+			"packocz__DateOfUpdate__c": "2021-04-25"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef4"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef3",
+			"packocz__Amount__c": 10400,
+			"packocz__DateOfUpdate__c": "2021-04-25"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef5"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef7",
+			"packocz__Amount__c": 23589,
+			"packocz__DateOfUpdate__c": "2021-04-25"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef6"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef5",
+			"packocz__Amount__c": 3029.05,
+			"packocz__DateOfUpdate__c": "2021-04-25"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef7"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef6",
+			"packocz__Amount__c": 2050,
+			"packocz__DateOfUpdate__c": "2021-04-25"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef8"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef1",
+			"packocz__Amount__c": 1500,
+			"packocz__DateOfUpdate__c": "2021-01-31"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef9"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef1",
+			"packocz__Amount__c": 2000,
+			"packocz__DateOfUpdate__c": "2021-02-14"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef10"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef1",
+			"packocz__Amount__c": 2000,
+			"packocz__DateOfUpdate__c": "2021-02-21"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef11"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef1",
+			"packocz__Amount__c": 1940,
+			"packocz__DateOfUpdate__c": "2021-02-07"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef12"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef1",
+			"packocz__Amount__c": 1650,
+			"packocz__DateOfUpdate__c": "2021-03-21"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef13"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef7",
+			"packocz__Amount__c": 22362,
+			"packocz__DateOfUpdate__c": "2021-03-14"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef14"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef7",
+			"packocz__Amount__c": 22455,
+			"packocz__DateOfUpdate__c": "2021-03-28"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef15"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef7",
+			"packocz__Amount__c": 22471,
+			"packocz__DateOfUpdate__c": "2021-04-04"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef16"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef7",
+			"packocz__Amount__c": 21306,
+			"packocz__DateOfUpdate__c": "2021-02-21"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef17"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef7",
+			"packocz__Amount__c": 1000,
+			"packocz__DateOfUpdate__c": "2021-02-14"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef18"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef7",
+			"packocz__Amount__c": 21241,
+			"packocz__DateOfUpdate__c": "2021-02-14"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef19"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef7",
+			"packocz__Amount__c": 20195,
+			"packocz__DateOfUpdate__c": "2021-02-07"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef20"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef2",
+			"packocz__Amount__c": 1000,
+			"packocz__DateOfUpdate__c": "2021-03-07"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef21"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef2",
+			"packocz__Amount__c": 976,
+			"packocz__DateOfUpdate__c": "2021-03-07"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef22"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef2",
+			"packocz__Amount__c": 1004,
+			"packocz__DateOfUpdate__c": "2021-03-14"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef23"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef2",
+			"packocz__Amount__c": 993,
+			"packocz__DateOfUpdate__c": "2021-03-21"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef24"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef2",
+			"packocz__Amount__c": 972,
+			"packocz__DateOfUpdate__c": "2021-03-28"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef25"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef2",
+			"packocz__Amount__c": 1010,
+			"packocz__DateOfUpdate__c": "2021-04-04"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef26"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef3",
+			"packocz__Amount__c": 3000,
+			"packocz__DateOfUpdate__c": "2021-01-30"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef27"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef3",
+			"packocz__Amount__c": 2000,
+			"packocz__DateOfUpdate__c": "2021-02-07"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef28"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef3",
+			"packocz__Amount__c": 1000,
+			"packocz__DateOfUpdate__c": "2021-02-14"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef29"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef3",
+			"packocz__Amount__c": 1000,
+			"packocz__DateOfUpdate__c": "2021-02-28"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef30"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef3",
+			"packocz__Amount__c": 3000,
+			"packocz__DateOfUpdate__c": "2021-03-07"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef31"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef3",
+			"packocz__Amount__c": 5000,
+			"packocz__DateOfUpdate__c": "2021-01-30"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef32"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef3",
+			"packocz__Amount__c": 5020,
+			"packocz__DateOfUpdate__c": "2021-02-07"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef33"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef3",
+			"packocz__Amount__c": 5010,
+			"packocz__DateOfUpdate__c": "2021-02-14"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef34"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef3",
+			"packocz__Amount__c": 6210,
+			"packocz__DateOfUpdate__c": "2021-02-21"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef35"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef3",
+			"packocz__Amount__c": 7200,
+			"packocz__DateOfUpdate__c": "2021-02-28"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef36"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef3",
+			"packocz__Amount__c": 10430,
+			"packocz__DateOfUpdate__c": "2021-03-07"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef37"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef3",
+			"packocz__Amount__c": 10320,
+			"packocz__DateOfUpdate__c": "2021-03-14"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef38"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef3",
+			"packocz__Amount__c": 10230,
+			"packocz__DateOfUpdate__c": "2021-03-21"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef39"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef3",
+			"packocz__Amount__c": 10350,
+			"packocz__DateOfUpdate__c": "2021-03-28"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef40"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef3",
+			"packocz__Amount__c": 10400,
+			"packocz__DateOfUpdate__c": "2021-04-04"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef41"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef4",
+			"packocz__Amount__c": 1002.06,
+			"packocz__DateOfUpdate__c": "2021-01-30"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef42"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef4",
+			"packocz__Amount__c": 1003,
+			"packocz__DateOfUpdate__c": "2021-02-07"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef43"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef4",
+			"packocz__Amount__c": 1004,
+			"packocz__DateOfUpdate__c": "2021-02-14"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef44"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef4",
+			"packocz__Amount__c": 1006,
+			"packocz__DateOfUpdate__c": "2021-02-21"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef45"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef4",
+			"packocz__Amount__c": 1008,
+			"packocz__DateOfUpdate__c": "2021-02-28"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef46"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef4",
+			"packocz__Amount__c": 1010,
+			"packocz__DateOfUpdate__c": "2021-03-07"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef47"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef4",
+			"packocz__Amount__c": 1012,
+			"packocz__DateOfUpdate__c": "2021-03-14"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef48"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef4",
+			"packocz__Amount__c": 1014,
+			"packocz__DateOfUpdate__c": "2021-03-21"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef49"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef4",
+			"packocz__Amount__c": 2016,
+			"packocz__DateOfUpdate__c": "2021-03-28"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef50"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef4",
+			"packocz__Amount__c": 2021,
+			"packocz__DateOfUpdate__c": "2021-04-04"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef51"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef4",
+			"packocz__Amount__c": 1000,
+			"packocz__DateOfUpdate__c": "2021-01-31"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef52"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef4",
+			"packocz__Amount__c": 1000,
+			"packocz__DateOfUpdate__c": "2021-03-28"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef53"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef5",
+			"packocz__Amount__c": 1000,
+			"packocz__DateOfUpdate__c": "2021-03-14"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef54"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef5",
+			"packocz__Amount__c": 2000,
+			"packocz__DateOfUpdate__c": "2021-03-28"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef55"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef5",
+			"packocz__Amount__c": 1005,
+			"packocz__DateOfUpdate__c": "2021-03-14"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef56"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef5",
+			"packocz__Amount__c": 1005.66,
+			"packocz__DateOfUpdate__c": "2021-03-21"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef57"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef2",
+			"packocz__Amount__c": 1997,
+			"packocz__DateOfUpdate__c": "2021-04-11"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef58"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef2",
+			"packocz__Amount__c": 1000,
+			"packocz__DateOfUpdate__c": "2021-04-11"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef59"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef5",
+			"packocz__Amount__c": 3017.3,
+			"packocz__DateOfUpdate__c": "2021-04-11"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef60"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef5",
+			"packocz__Amount__c": 3022.19,
+			"packocz__DateOfUpdate__c": "2021-04-18"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef61"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef6",
+			"packocz__Amount__c": 2100,
+			"packocz__DateOfUpdate__c": "2021-04-18"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef62"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef6",
+			"packocz__Amount__c": 500,
+			"packocz__DateOfUpdate__c": "2021-04-16"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef63"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef3",
+			"packocz__Amount__c": 10390,
+			"packocz__DateOfUpdate__c": "2021-04-18"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef64"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef2",
+			"packocz__Amount__c": 2008,
+			"packocz__DateOfUpdate__c": "2021-04-18"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef65"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef3",
+			"packocz__Amount__c": 10230,
+			"packocz__DateOfUpdate__c": "2021-04-11"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef66"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef7",
+			"packocz__Amount__c": 23456,
+			"packocz__DateOfUpdate__c": "2021-04-11"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef67"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef6",
+			"packocz__Amount__c": 1511.54,
+			"packocz__DateOfUpdate__c": "2021-04-11"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef68"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef7",
+			"packocz__Amount__c": 1000,
+			"packocz__DateOfUpdate__c": "2021-04-11"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef69"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef4",
+			"packocz__Amount__c": 2024,
+			"packocz__DateOfUpdate__c": "2021-04-11"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef70"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef5",
+			"packocz__Amount__c": 3009.67,
+			"packocz__DateOfUpdate__c": "2021-04-04"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef71"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef8",
+			"packocz__Amount__c": 5000,
+			"packocz__DateOfUpdate__c": "2021-03-21"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef72"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef8",
+			"packocz__Amount__c": 5000,
+			"packocz__DateOfUpdate__c": "2021-03-28"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef73"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef8",
+			"packocz__Amount__c": 5000,
+			"packocz__DateOfUpdate__c": "2021-04-04"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef74"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef8",
+			"packocz__Amount__c": 5000,
+			"packocz__DateOfUpdate__c": "2021-03-21"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef75"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef8",
+			"packocz__Amount__c": 10000,
+			"packocz__DateOfUpdate__c": "2021-03-28"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef76"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef8",
+			"packocz__Amount__c": 15000,
+			"packocz__DateOfUpdate__c": "2021-04-04"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef77"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef6",
+			"packocz__Amount__c": 1000,
+			"packocz__DateOfUpdate__c": "2021-03-14"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef78"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef6",
+			"packocz__Amount__c": 500,
+			"packocz__DateOfUpdate__c": "2021-03-28"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef79"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef6",
+			"packocz__Amount__c": 1000,
+			"packocz__DateOfUpdate__c": "2021-03-14"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef80"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef6",
+			"packocz__Amount__c": 1000,
+			"packocz__DateOfUpdate__c": "2021-03-21"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef81"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef6",
+			"packocz__Amount__c": 1499.97,
+			"packocz__DateOfUpdate__c": "2021-03-28"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef82"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef7",
+			"packocz__Amount__c": 20000,
+			"packocz__DateOfUpdate__c": "2021-01-30"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef83"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef6",
+			"packocz__Amount__c": 1505.1,
+			"packocz__DateOfUpdate__c": "2021-04-04"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef84"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef1",
+			"packocz__Amount__c": 1800,
+			"packocz__DateOfUpdate__c": "2021-04-18"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef85"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef4",
+			"packocz__Amount__c": 2530,
+			"packocz__DateOfUpdate__c": "2021-04-18"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef86"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef8",
+			"packocz__Amount__c": 15000,
+			"packocz__DateOfUpdate__c": "2021-04-18"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef87"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef7",
+			"packocz__Amount__c": 21318,
+			"packocz__DateOfUpdate__c": "2021-03-07"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef88"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef7",
+			"packocz__Amount__c": 22438,
+			"packocz__DateOfUpdate__c": "2021-03-21"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef89"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef7",
+			"packocz__Amount__c": 21334,
+			"packocz__DateOfUpdate__c": "2021-02-28"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef90"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef7",
+			"packocz__Amount__c": 1000,
+			"packocz__DateOfUpdate__c": "2021-03-14"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef91"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef7",
+			"packocz__Amount__c": 20211,
+			"packocz__DateOfUpdate__c": "2021-01-30"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef92"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef5",
+			"packocz__Amount__c": 3006.11,
+			"packocz__DateOfUpdate__c": "2021-03-28"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef93"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef1",
+			"packocz__Amount__c": 1700,
+			"packocz__DateOfUpdate__c": "2021-03-07"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef94"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef1",
+			"packocz__Amount__c": 1800,
+			"packocz__DateOfUpdate__c": "2021-01-31"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef95"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef1",
+			"packocz__Amount__c": 1700,
+			"packocz__DateOfUpdate__c": "2021-02-28"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef96"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef1",
+			"packocz__Amount__c": 1750,
+			"packocz__DateOfUpdate__c": "2021-03-14"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef97"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef1",
+			"packocz__Amount__c": 1650,
+			"packocz__DateOfUpdate__c": "2021-03-28"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef98"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef1",
+			"packocz__Amount__c": 1700,
+			"packocz__DateOfUpdate__c": "2021-04-04"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef99"
+			},
+			"CurrencyIsoCode": "CZK",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef7",
+			"packocz__Amount__c": 23549,
+			"packocz__DateOfUpdate__c": "2021-04-18"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef100"
+			},
+			"CurrencyIsoCode": "EUR",
+			"RecordTypeId": "Deposit",
+			"packocz__Investment__c": "InvestmentRef4",
+			"packocz__Amount__c": 500,
+			"packocz__DateOfUpdate__c": "2021-04-16"
+		},
+		{
+			"attributes": {
+				"type": "packocz__InvestmentUpdate__c",
+				"referenceId": "InvestmentUpdateRef101"
+			},
+			"CurrencyIsoCode": "USD",
+			"RecordTypeId": "BalanceUpdate",
+			"packocz__Investment__c": "InvestmentRef1",
+			"packocz__Amount__c": 1800,
+			"packocz__DateOfUpdate__c": "2021-04-11"
+		}
+	]
+}

@@ -2,10 +2,17 @@
 	"packageDirectories": [
 		{
 			"path": "invest-app",
-			"default": true
+			"default": true,
+			"package": "InvestmentTracker",
+			"versionName": "ver 0.1",
+			"versionNumber": "0.1.0.NEXT"
 		}
 	],
-	"namespace": "",
+	"namespace": "packocz",
 	"sfdcLoginUrl": "https://login.salesforce.com",
-	"sourceApiVersion": "50.0"
+	"sourceApiVersion": "51.0",
+	"packageAliases": {
+		"InvestmentTracker": "0Ho08000000blN1CAI",
+		"InvestmentTracker@0.1.0-1": "04t08000000RvusAAC"
+	}
 }
