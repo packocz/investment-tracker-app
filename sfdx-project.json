@@ -5,7 +5,12 @@
 			"default": true,
 			"package": "InvestmentTracker",
 			"versionName": "ver 0.1",
-			"versionNumber": "0.1.0.NEXT"
+			"versionNumber": "0.1.0.NEXT",
+			"dependencies": [
+				{
+					"package": "04t08000000AzzpAAC"
+				}
+			]
 		}
 	],
 	"namespace": "packocz",
@@ -13,6 +18,7 @@
 	"sourceApiVersion": "51.0",
 	"packageAliases": {
 		"InvestmentTracker": "0Ho08000000blN1CAI",
-		"InvestmentTracker@0.1.0-1": "04t08000000RvusAAC"
+		"InvestmentTracker@0.1.0-1": "04t08000000RvusAAC",
+		"InvestmentTracker@0.1.0-2": "04t08000000AzzuAAC"
 	}
 }

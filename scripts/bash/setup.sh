@@ -48,7 +48,9 @@ else
     echo "creating org with alias $ALIAS for $DAYS days using $DEFINITION defition file in DevHub $DEVHUB"
     sfdx force:org:create -f $DEFINITION -a $ALIAS -d $DAYS -s -v $DEVHUB
 fi;
-
+echo "install dependencies"
+echo "Trigger Actions Framework"
+sfdx force:package:install --package=04t08000000AzzpAAC --wait=30
 echo "pushing source"
 sfdx force:source:push
 echo "assigning permset"
