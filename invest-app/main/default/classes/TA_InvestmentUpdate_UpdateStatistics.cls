@@ -1,12 +1,15 @@
+@namespaceAccessible
 public with sharing class TA_InvestmentUpdate_UpdateStatistics implements packocz.TriggerAction.AfterInsert, packocz.TriggerAction.AfterUpdate, packocz.TriggerAction.AfterDelete {
 	private Set<Id> investmentIds;
 	private Date fromDate;
 
+	@namespaceAccessible
 	public TA_InvestmentUpdate_UpdateStatistics() {
 		this.investmentIds = new Set<Id>();
 		this.fromDate = System.today();
 	}
 
+	@namespaceAccessible
 	public void afterInsert(List<InvestmentUpdate__c> newList) {
 		for (InvestmentUpdate__c iu : newList) {
 			this.investmentIds.add(iu.Investment__c);
@@ -17,6 +20,7 @@ public with sharing class TA_InvestmentUpdate_UpdateStatistics implements packoc
 		executeJobs();
 	}
 
+	@namespaceAccessible
 	public void afterUpdate(List<InvestmentUpdate__c> newList, List<InvestmentUpdate__c> oldList) {
 		Map<Id, InvestmentUpdate__c> oldMap = new Map<Id, InvestmentUpdate__c>(oldList);
 		for (InvestmentUpdate__c iu : newList) {
@@ -34,6 +38,7 @@ public with sharing class TA_InvestmentUpdate_UpdateStatistics implements packoc
 		executeJobs();
 	}
 
+	@namespaceAccessible
 	public void afterDelete(List<InvestmentUpdate__c> oldList) {
 		for (InvestmentUpdate__c iu : oldList) {
 			this.investmentIds.add(iu.Investment__c);

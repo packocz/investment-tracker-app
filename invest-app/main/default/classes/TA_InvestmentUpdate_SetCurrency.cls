@@ -1,4 +1,6 @@
+@namespaceAccessible
 public without sharing class TA_InvestmentUpdate_SetCurrency implements packocz.TriggerAction.BeforeInsert {
+	@namespaceAccessible
 	public void beforeInsert(List<InvestmentUpdate__c> newList) {
 		Set<Id> investmentIds = new Set<Id>();
 		for (InvestmentUpdate__c iu : newList) {
