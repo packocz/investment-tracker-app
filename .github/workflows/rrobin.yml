@@ -10,12 +10,6 @@ jobs:
             - name: Count
               id: step_one
               run: |
-                  number="${{ env.verification_org_number }}"
-                  echo "previous: $number"
-                  number=$(($number + 1))
-                  if [ $number -gt 3 ]; then
-                      number=1
-                      echo "Overflow, start again";
-                  fi
-                  echo "using and saving: $number"
-                  echo "verification_org_number=$number" >> $GITHUB_ENV
+                  timestamp=$(date +%s)
+                  number=$(($timestamp % 3 + 1))
+                  echo "using: $number"
