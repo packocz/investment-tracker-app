@@ -1,0 +1,21 @@
+name: Round Robin
+on:
+    workflow_dispatch:
+
+jobs:
+    rrobin:
+        name: Number
+        runs-on: ubuntu-latest
+        steps:
+            - name: Count
+              id: step_one
+              run: |
+                  number="${{ env.verification_org_number }}"
+                  echo "previous: $number"
+                  number=$(($number + 1))
+                  if [ $number -gt 3 ]; then
+                      number=1
+                      echo "Overflow, start again";
+                  fi
+                  echo "using and saving: $number"
+                  echo "verification_org_number=$number" >> $GITHUB_ENV
