@@ -1,19 +1,67 @@
-name: Sonarcloud
+name: Deploy Validation and Analysis
 on:
     workflow_dispatch:
     push:
         branches:
             - main
-    pull_request:
-        types: [opened, synchronize, reopened]
 jobs:
+    deploy:
+        name: ValidateSource
+        runs-on: 'ubuntu-latest'
+        container: salesforce/salesforcedx:latest-rc-full
+        steps:
+            - name: Clone Repository (Latest)
+              uses: actions/checkout@v2
+              with:
+                  ref: ${{ github.event.inputs.ref }}
+
+            - name: 'Populate auth file with DevHub secret'
+              shell: bash
+              run: |
+                  echo ${{ secrets.DEVHUB_KEY}} > ./DEVHUB_KEY.txt
+                  secretFileSize=$(wc -c "./DEVHUB_KEY.txt" | awk '{print $1}')
+                  if [ $secretFileSize == 1 ]; then
+                      echo "Missing DEVHUB_KEY secret.";
+                      exit 1;
+                  fi
+
+            - name: 'Authenticate DevHub'
+              run: sfdx auth:sfdxurl:store -f ./DEVHUB_KEY.txt -a devhub
+
+            - name: 'Create Scratch Org'
+              run: sfdx force:org:create -f config/project-scratch-def.json -a testorg -d 1 -s
+
+            - name: 'Install Dependencies'
+              run: sfdx force:package:install --package=04t08000000AzzpAAC --wait=30
+
+            - name: 'Deploy Source'
+              run: sfdx force:source:push
+
+            - name: 'Run Tests'
+              run: sfdx force:apex:test:run --testlevel=RunLocalTests --coverage --resultformat=json --outputdir=testrun
+
+            - name: 'Delete Scratch Org'
+              run: sfdx force:org:delete --targetusername=testorg --noprompt
+
+            - uses: actions/upload-artifact@master
+              with:
+                  name: coverage-report
+                  path: testrun/test-result-codecoverage.json
+
     sonarcloud:
-        name: SonarCloud
+        name: Analyse
+        needs: deploy
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/download-artifact@master
+              with:
+                  name: coverage-report
+                  path: testrun/test-result-codecoverage.json
+
             - uses: actions/checkout@v2
               with:
                   fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
+
             - name: SonarCloud Scan
               uses: SonarSource/sonarcloud-github-action@master
               env:
