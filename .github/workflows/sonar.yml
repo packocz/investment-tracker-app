@@ -38,7 +38,7 @@ jobs:
               run: sfdx force:source:push
 
             - name: 'Run Tests'
-              run: sfdx force:apex:test:run --testlevel=RunLocalTests --coverage --resultformat=json --outputdir=testrun
+              run: sfdx force:apex:test:run --testlevel=RunLocalTests --codecoverage --resultformat=json --outputdir=testrun
 
             - name: 'Delete Scratch Org'
               run: sfdx force:org:delete --targetusername=testorg --noprompt
