@@ -29,7 +29,7 @@ jobs:
               run: sfdx auth:sfdxurl:store -f ./DEVHUB_KEY.txt -a devhub
 
             - name: 'Create Scratch Org'
-              run: sfdx force:org:create -f config/project-scratch-def.json -a testorg -d 1 -s
+              run: sfdx force:org:create -f config/project-scratch-def.json -a testorg -d 1 -s -v devhub
 
             - name: 'Install Dependencies'
               run: sfdx force:package:install --package=04t08000000AzzpAAC --wait=30
