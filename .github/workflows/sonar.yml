@@ -1,9 +1,7 @@
 name: Deploy Validation and Analysis
 on:
     workflow_dispatch:
-    push:
-        branches:
-            - main
+        - main
 jobs:
     deploy:
         name: ValidateSource
