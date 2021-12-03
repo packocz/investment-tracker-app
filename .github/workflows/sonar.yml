@@ -1,6 +1,12 @@
 name: Deploy Validation and Analysis
 on:
     workflow_dispatch:
+    push:
+        branches:
+            - main
+    pull_request:
+        types: [opened, synchronize, reopened]
+        branches: [main]
 jobs:
     deploy:
         name: ValidateSource
@@ -22,23 +28,23 @@ jobs:
                       exit 1;
                   fi
 
-            - name: 'Authenticate DevHub'
-              run: sfdx auth:sfdxurl:store -f ./DEVHUB_KEY.txt -a devhub
+            #- name: 'Authenticate DevHub'
+            #  run: sfdx auth:sfdxurl:store -f ./DEVHUB_KEY.txt -a devhub
 
-            - name: 'Create Scratch Org'
-              run: sfdx force:org:create -f config/project-scratch-def.json -a testorg -d 1 -s -v devhub
+            #- name: 'Create Scratch Org'
+            #  run: sfdx force:org:create -f config/project-scratch-def.json -a testorg -d 1 -s -v devhub
 
-            - name: 'Install Dependencies'
-              run: sfdx force:package:install --package=04t08000000AzzpAAC --wait=30
+            #- name: 'Install Dependencies'
+            #  run: sfdx force:package:install --package=04t08000000AzzpAAC --wait=30
 
-            - name: 'Deploy Source'
-              run: sfdx force:source:push
+            #- name: 'Deploy Source'
+            #  run: sfdx force:source:push
 
-            - name: 'Run Tests'
-              run: sfdx force:apex:test:run --testlevel=RunLocalTests --codecoverage --resultformat=json --outputdir=testrun
+            #- name: 'Run Tests'
+            #  run: sfdx force:apex:test:run --testlevel=RunLocalTests --codecoverage --resultformat=json --outputdir=testrun
 
-            - name: 'Delete Scratch Org'
-              run: sfdx force:org:delete --targetusername=testorg --noprompt
+            #- name: 'Delete Scratch Org'
+            #  run: sfdx force:org:delete --targetusername=testorg --noprompt
 
             - name: SonarCloud Scan
               uses: SonarSource/sonarcloud-github-action@master
