@@ -1,9 +1,6 @@
 name: Deploy Validation and Analysis
 on:
     workflow_dispatch:
-    push:
-        branches:
-            - main
 jobs:
     deploy:
         name: ValidateSource
@@ -42,25 +39,6 @@ jobs:
 
             - name: 'Delete Scratch Org'
               run: sfdx force:org:delete --targetusername=testorg --noprompt
-
-            - uses: actions/upload-artifact@master
-              with:
-                  name: coverage-report
-                  path: testrun/test-result-codecoverage.json
-
-    sonarcloud:
-        name: Analyse
-        needs: deploy
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/download-artifact@master
-              with:
-                  name: coverage-report
-                  path: testrun/test-result-codecoverage.json
-
-            - uses: actions/checkout@v2
-              with:
-                  fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
 
             - name: SonarCloud Scan
               uses: SonarSource/sonarcloud-github-action@master
