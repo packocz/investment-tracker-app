@@ -40,6 +40,6 @@ jobs:
                   pull_number: ${{ github.event.number }}
                   body: 'Static analysis review'
                   event: 'COMMENT'
-                  comments: ${{ steps.getcomments.outputs.comments }}
+                  comments: '${{ steps.getcomments.outputs.comments }}'
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
