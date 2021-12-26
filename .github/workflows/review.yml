@@ -1,0 +1,46 @@
+name: Review
+on:
+    workflow_dispatch:
+    pull_request:
+        types: [opened, synchronize, reopened]
+        branches: [main]
+jobs:
+    review:
+        name: ReviewSource
+        runs-on: 'ubuntu-latest'
+        container: salesforce/salesforcedx:latest-rc-full
+        steps:
+            - name: Clone Repository (Latest)
+              uses: actions/checkout@v2
+              with:
+                  ref: ${{ github.event.inputs.ref }}
+
+            - name: 'Install Scanner'
+              run: sfdx plugins:install @salesforce/sfdx-scanner
+
+            - name: 'Run Scanner'
+              run: sfdx scanner:run -t invest-app -f csv > report.csv
+
+            - name: 'Convert report to json'
+              run: cat report.csv | python -c 'import csv, json, sys; print(json.dumps([dict(r) for r in csv.DictReader(sys.stdin)]))' > report.json
+
+            - name: 'Transform report to review comments'
+              run: |
+                  echo "`jq 'map({path: .File, line: .Line, body: (.Description + " (" + .Engine + "-" + "Severity: " + .Severity + ")")})' report.json`" > comments.json
+
+            - name: Read Comments File
+              id: getcomments
+              run: echo "::set-output name=comments::$(cat comments.json)"
+
+            - name: 'Create Review'
+              uses: octokit/request-action@v2.x
+              with:
+                  route: POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews
+                  owner: octokit
+                  repo: request-action
+                  head_sha: ${{ github.sha }}
+                  body: 'Static analysis review'
+                  event: 'COMMENT'
+                  comments: ${{ steps.getcomments.outputs.comments }}
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
