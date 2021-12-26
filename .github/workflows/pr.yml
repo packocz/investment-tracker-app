@@ -1,0 +1,37 @@
+# Unique name for this workflow
+name: CI on PR
+
+# Definition when the workflow should run
+on:
+    workflow_dispatch:
+    pull_request:
+        types: [opened, edited, synchronize, reopened]
+        branches: [main]
+
+# Jobs to be executed
+jobs:
+    dev-org-validation:
+        runs-on: ubuntu-latest
+        container: salesforce/salesforcedx:latest-rc-full
+        steps:
+            # Checkout the source code
+            - name: 'Checkout source code'
+              uses: actions/checkout@v2
+
+            # Store secret for testing dev org
+            - name: 'Populate auth file with TEST_KEY secret'
+              shell: bash
+              run: |
+                  echo ${{ secrets.TEST_KEY}} > ./TEST_KEY.txt
+                  secretFileSize=$(wc -c "./TEST_KEY.txt" | awk '{print $1}')
+                  if [ $secretFileSize == 1 ]; then
+                      echo "Missing TEST_KEY secret.";
+                      exit 1;
+                  fi
+            # Authenticate test org
+            - name: 'Authenticate Testing Org'
+              run: sfdx auth:sfdxurl:store -f ./TEST_KEY.txt -a test_invest
+
+            # Validate Source against Dev Test Org
+            - name: 'Validate Source'
+              run: sfdx force:source:deploy --sourcepath=invest-app --testlevel=RunLocalTests --checkonly --wait=99 --targetusername test_invest
