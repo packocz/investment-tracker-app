@@ -26,7 +26,7 @@ jobs:
 
             - name: 'Transform report to review comments'
               run: |
-                  echo "`jq -c 'map({path: .File, line: .Line, body: (.Description + " (" + .Engine + "-" + "Severity: " + .Severity + ")")})' report.json`" > comments.json
+                  echo "`jq -c 'map({path: .File, line: (.Line)|tonumber, body: (.Description + " (" + .Engine + "-" + "Severity: " + .Severity + ")")})' report.json`" > comments.json
 
             - name: Read Comments File
               id: getcomments
