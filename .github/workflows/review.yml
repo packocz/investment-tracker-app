@@ -26,7 +26,7 @@ jobs:
 
             - name: 'Transform report to review comments'
               run: |
-                  echo "`jq -c 'map({path: .File | split("${{ github.workspace }}")[1], line: (.Line)|tonumber, body: (.Description + " (" + .Engine + "-" + "Severity: " + .Severity + ")")})' report.json`" > comments.json
+                  echo "`jq 'map({path: .File | split("${{ github.workspace }}")[1], line: (.Line)|tonumber, body: (.Description + " (" + .Engine + "-" + "Severity: " + .Severity + ")")})' report.json`" > comments.json
 
             - name: Read Comments File
               id: getcomments
