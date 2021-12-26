@@ -35,10 +35,9 @@ jobs:
             - name: 'Create Review'
               uses: octokit/request-action@v2.x
               with:
-                  route: POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews
-                  owner: octokit
-                  repo: request-action
-                  head_sha: ${{ github.sha }}
+                  route: POST /repos/{repo}/pulls/{pull_number}/reviews
+                  repo: ${{ github.repository }}
+                  pull_number: ${{ github.event.number }}
                   body: 'Static analysis review'
                   event: 'COMMENT'
                   comments: ${{ steps.getcomments.outputs.comments }}
