@@ -15,4 +15,7 @@ public with sharing class InvestmentJob implements Database.Batchable<Investment
 	}
 	public void finish(Database.BatchableContext bc) {
 	}
+
+	public void someMethod() {
+	}
 }
