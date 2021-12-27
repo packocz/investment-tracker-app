@@ -17,13 +17,13 @@ jobs:
 
             - name: Do git diff
               id: getdiff
-              run: echo "::set-output name=difflist::$(git diff --name-only --diff-filter=MCRA $(git merge-base --fork-point "${{ github.base_ref }}" "${{ github.base_ref }}").."${{ github.head_ref }})" invest-app/**/* | paste -sd "," -)"
+              run: echo "::set-output name=difflist::$(git diff --name-only --diff-filter=MCRA $(git merge-base --fork-point ${{ github.base_ref }} ${{ github.head_ref }})..${{ github.head_ref }}) invest-app/**/* | paste -sd "," -)"
 
             - name: 'Install Scanner'
               run: sfdx plugins:install @salesforce/sfdx-scanner
 
             - name: 'Run Scanner'
-              run: sfdx scanner:run -t "${{ steps.getdiff.outputs.difflist }}"" -f csv > report.csv
+              run: sfdx scanner:run -t "${{ steps.getdiff.outputs.difflist }}" -f csv > report.csv
 
             - name: 'Convert report to json'
               run: cat report.csv | python -c 'import csv, json, sys; print(json.dumps([dict(r) for r in csv.DictReader(sys.stdin)]))' > report.json
