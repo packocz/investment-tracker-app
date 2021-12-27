@@ -12,6 +12,7 @@ jobs:
             - name: Clone Repository (Latest)
               uses: actions/checkout@v2
               with:
+                  fetch-depth: 0
                   ref: ${{ github.event.inputs.ref }}
 
             - name: Do git diff
