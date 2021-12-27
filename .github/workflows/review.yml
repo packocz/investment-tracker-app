@@ -16,7 +16,9 @@ jobs:
                   ref: ${{ github.event.inputs.ref }}
 
             - name: Fetch main branch
-              run: git fetch origin main
+              run: |
+                  git fetch origin ${{ github.base_ref }}
+                  git fetch origin ${{ github.head_ref }}
 
             - name: Do git diff
               id: getdiff
