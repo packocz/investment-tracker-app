@@ -42,7 +42,7 @@ jobs:
 
             - name: 'Transform report to review comments'
               run: |
-                  echo "`jq -c 'map({path: (.File | split("${{ github.event.repository.name }}")[2]), position: 1, body: ("(Line: " + .Line + ") " + .Description + " (" + .Engine + " - " + .Rule + " - " + "Severity: " + .Severity + ")")})' report.json`" > comments.json
+                  echo "`jq -c 'map({path: (.File | split("${{ github.event.repository.name }}/")[1]), position: 1, body: ("(Line: " + .Line + ") " + .Description + " (" + .Engine + " - " + .Rule + " - " + "Severity: " + .Severity + ")")})' report.json`" > comments.json
 
             - name: Read Comments File
               id: getcomments
