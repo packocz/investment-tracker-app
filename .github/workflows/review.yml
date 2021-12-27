@@ -57,6 +57,5 @@ jobs:
                   body: 'Static analysis review'
                   event: 'COMMENT'
                   comments: '${{ steps.getcomments.outputs.comments }}'
-                  commit_id: ${{ github.sha }}
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
