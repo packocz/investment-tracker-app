@@ -10,6 +10,15 @@ jobs:
         runs-on: 'ubuntu-latest'
         container: salesforce/salesforcedx:latest-rc-full
         steps:
+            - name: Setup OS
+              run: |
+                  sudo apt-get update
+                  sudo apt-get upgrade
+
+            - name: Setup Git
+              run: |
+                  sudo apt-get install git
+
             - name: Clone Repository (Latest)
               uses: actions/checkout@v2
               with:
