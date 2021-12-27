@@ -8,14 +8,7 @@ jobs:
     review:
         name: ReviewSource
         runs-on: 'ubuntu-latest'
-        container: salesforce/salesforcedx:latest-rc-full
         steps:
-            - name: Setup Git
-              run: |
-                  apt-get update
-                  apt-get install git
-                  git version
-
             - name: Clone Repository (Latest)
               uses: actions/checkout@v2
               with:
@@ -24,6 +17,13 @@ jobs:
             - name: Do git diff
               id: getdiff
               run: echo "::set-output name=difflist::$(git diff --name-only --diff-filter=MCRA $(git merge-base --fork-point ${{ github.base_ref }} ${{ github.head_ref }})..${{ github.head_ref }} invest-app/**/* | paste -sd "," -)"
+
+            - name: Install Salesforce CLI
+              run: |
+                  wget https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+                  mkdir sfdx-cli
+                  tar xJf sfdx-linux-amd64.tar.xz -C sfdx-cli --strip-components 1
+                  ./sfdx-cli/install
 
             - name: 'Install Scanner'
               run: sfdx plugins:install @salesforce/sfdx-scanner
