@@ -15,6 +15,9 @@ jobs:
                   fetch-depth: 0
                   ref: ${{ github.event.inputs.ref }}
 
+            - name: Fetch main branch
+              run: git fetch origin main
+
             - name: Do git diff
               id: getdiff
               run: echo "::set-output name=difflist::$(git diff --name-only --diff-filter=MCRA $(git merge-base --fork-point ${{ github.base_ref }} ${{ github.sha }})..${{ github.sha }} invest-app/**/* | paste -sd "," -)"
