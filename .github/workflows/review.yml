@@ -16,7 +16,7 @@ jobs:
 
             - name: Do git diff
               id: getdiff
-              run: echo "::set-output name=difflist::$(git diff --name-only --diff-filter=MCRA $(git merge-base --fork-point ${{ github.base_ref }} ${{ github.sha }}..${{ github.sha }} invest-app/**/* | paste -sd "," -)"
+              run: echo "::set-output name=difflist::$(git diff --name-only --diff-filter=MCRA $(git merge-base --fork-point ${{ github.base_ref }} ${{ github.sha }})..${{ github.sha }} invest-app/**/* | paste -sd "," -)"
 
             - name: Install Salesforce CLI
               run: |
