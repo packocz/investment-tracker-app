@@ -10,6 +10,6 @@ jobs:
         runs-on: 'ubuntu-latest'
         steps:
             - name: Code Review
-              uses: ./
+              uses: packocz/sfdx-code-review-action@main
               with:
                   reject_threshold: 3
