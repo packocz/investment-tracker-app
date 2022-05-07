@@ -72,4 +72,4 @@ function filterAndTranslatePositionReviewComments(allComments, positionMaps) {
 let lineMaps = getLineToPositionMaps(lineDiffData);
 let relevantComments = filterAndTranslatePositionReviewComments(comments, lineMaps);
 
-fs.writeFileSync('relevant-comments.json', JSON.stringify(relevantComments));
+fs.writeFileSync(commentsPath, JSON.stringify(relevantComments));

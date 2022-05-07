@@ -46,7 +46,7 @@ jobs:
 
             - name: 'Find Git Diff lines'
               run: |
-                  ./scripts/bash/git-diff-changed-lines.sh ${{ github.base_ref }}..${{ github.head_ref }} > diffLines.txt
+                  ./scripts/bash/git-diff-changed-lines.sh origin/${{ github.base_ref }}..origin/${{ github.head_ref }} > diffLines.txt
 
             - name: 'Translate Line to Position and filter issues outside diff'
               run: |
