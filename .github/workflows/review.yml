@@ -1,0 +1,15 @@
+name: Review
+on:
+    workflow_dispatch:
+    pull_request:
+        types: [opened, synchronize, reopened]
+        branches: [main]
+jobs:
+    review:
+        name: ReviewSource
+        runs-on: 'ubuntu-latest'
+        steps:
+            - name: Code Review
+              uses: actions/javascript-action@main
+              with:
+                  reject_threshold: 3
