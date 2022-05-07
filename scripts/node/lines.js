@@ -1,7 +1,5 @@
 #!/usr/bin/node
 
-console.log('test');
-
 const args = process.argv.slice(2);
 const filePath = args[0];
 const commentsPath = args[1];
@@ -52,13 +50,14 @@ function filterAndTranslatePositionReviewComments(allComments, positionMaps) {
 	let relevantComments = [];
 
 	allComments.forEach((comment) => {
-		let line = comment.position;
+		let line = parseInt(comment.position);
 		let filename = comment.path;
 		if (!positionMaps.has(filename)) {
 			console.warn(`${filename} not in git diff`);
 			return;
 		}
 		let lineToPosition = positionMaps.get(filename);
+		console.log(lineToPosition);
 		if (!lineToPosition.has(line)) {
 			console.warn(`line ${line} is not in git diff for ${filename}`);
 			return;
@@ -70,6 +69,7 @@ function filterAndTranslatePositionReviewComments(allComments, positionMaps) {
 }
 
 let lineMaps = getLineToPositionMaps(lineDiffData);
+console.log(lineMaps);
 let relevantComments = filterAndTranslatePositionReviewComments(comments, lineMaps);
 
 fs.writeFileSync(commentsPath, JSON.stringify(relevantComments));
