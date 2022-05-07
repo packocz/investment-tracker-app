@@ -48,14 +48,10 @@ jobs:
               run: |
                   ./scripts/bash/git-diff-changed-lines.sh origin/${{ github.base_ref }}..origin/${{ github.head_ref }} > diffLines.txt
 
-            - name: 'Translate Line to Position and filter issues outside diff'
+            - name: 'Translate Line to Position, filter issues outside diff and Evaluate Approval'
               run: |
-                  node ./scripts/node/lines.js diffLines.txt comments.json
-
+                  node ./scripts/node/lines.js diffLines.txt comments.json 3 1
             # Severity 3 = REQUEST_CHANGES, SEVERITY 1 = APPROVE else COMMENT
-            - name: 'Evaluate Approval'
-              run: |
-                  node ./scripts/node/approval.js comments.json 3 1
 
             - name: Read Comments File
               id: getcomments

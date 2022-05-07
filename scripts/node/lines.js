@@ -4,6 +4,9 @@ const args = process.argv.slice(2);
 const filePath = args[0];
 const commentsPath = args[1];
 
+const rejectTreshold = args.length > 2 ? args[2] : undefined;
+const approveThreshold = args.length > 3 ? args[3] : undefined;
+
 const fs = require('fs');
 
 let lineDiffData;
@@ -72,5 +75,37 @@ function filterAndTranslatePositionReviewComments(allComments, positionMaps) {
 let lineMaps = getLineToPositionMaps(lineDiffData);
 console.log(lineMaps);
 let relevantComments = filterAndTranslatePositionReviewComments(comments, lineMaps);
+
+let commentCount = 0;
+let maxSeverity = 0;
+let needsRework = 0;
+comments.forEach((comment) => {
+	let severity = parseInt(comment.severity);
+	commentCount++;
+	if (severity > maxSeverity) {
+		maxSeverity = severity;
+	}
+	if (rejectTreshold && severity >= rejectTreshold) {
+		needsRework++;
+	}
+	delete comment.severity;
+});
+
+let reviewEvent = 'COMMENT';
+let reviewText = 'Salesforce Code Analyzer did not find any rule violations';
+if (approveThreshold && maxSeverity <= approveThreshold) {
+	reviewEvent = 'APPROVE';
+	if (commentCount > 0) {
+		reviewText = `Maximum severity of the ${commentCount} rule violations identified by the Salesforce Code Analyzer was ${maxSeverity}.`;
+	}
+} else if (commentCount > 0 && rejectTreshold && maxSeverity >= rejectTreshold) {
+	reviewEvent = 'REQUEST_CHANGES';
+	reviewText = `At least ${needsRework} of the ${commentCount} rule violations identified by the Salesforce Code Analyzer require rework. Max severity found: ${maxSeverity}. `;
+} else if (commentCount > 0) {
+	reviewText = `Salesforce Code Analyzer identified ${commentCount} rule violations in your changes with severity as high as: ${maxSeverity}. `;
+}
+
+fs.writeFileSync('reviewEvent.txt', reviewEvent);
+fs.writeFileSync('reviewBody.txt', reviewText);
 
 fs.writeFileSync(commentsPath, JSON.stringify(relevantComments));
