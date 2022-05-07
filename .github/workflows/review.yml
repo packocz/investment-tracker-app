@@ -72,7 +72,7 @@ jobs:
                   repo: ${{ github.repository }}
                   pull_number: ${{ github.event.number }}
                   body: '${{ steps.getcomments.outputs.body }}'
-                  event: '${{ steps.getcomments.outputs.event }}'
-                  comments: '${{ steps.getcomments.outputs.comments }}'
+                  event: '${{ steps.getevent.outputs.event }}'
+                  comments: '${{ steps.getbody.outputs.comments }}'
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
