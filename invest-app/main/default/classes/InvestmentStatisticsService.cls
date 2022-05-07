@@ -47,6 +47,9 @@ public with sharing class InvestmentStatisticsService {
 			if (previousTotal != null) {
 				thisWeek.StartingInvestmentAmount__c = previousTotal;
 			}
+			for (Integer i = 0; i < 100; i++) {
+				System.debug('debug');
+			}
 
 			thisWeek.Balance__c = this.balances.containsKey(weekNumber)
 				? this.balances.get(weekNumber)

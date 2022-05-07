@@ -19,7 +19,7 @@ function getLineToPositionMaps(diffLines) {
 	let lines = diffLines.split('\n');
 	let fileToLineMaps = new Map();
 	let currentFileName;
-	let currentIndex = 1;
+	let currentIndex = 3; //diff hunk shows 2 lines before the change
 	lines.forEach((oneLine) => {
 		let fileAndLines = oneLine.split(':');
 		let linesInHunk;
@@ -27,11 +27,12 @@ function getLineToPositionMaps(diffLines) {
 		if (fileAndLines.length === 2) {
 			//new file
 			currentFileName = fileAndLines[0];
-			currentIndex = 1;
+			currentIndex = 3; //diff hunk shows 2 lines before the change
 			linesInHunk = fileAndLines[1].split(',');
 			fileLineMap = new Map();
 		} else {
 			//lines from next hunk
+			currentIndex++; //diff hunk shows 1 line after the change
 			linesInHunk = fileAndLines[0].split(',');
 			fileLineMap = fileToLineMaps.get(currentFileName);
 		}
