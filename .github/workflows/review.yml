@@ -42,7 +42,7 @@ jobs:
 
             - name: 'Transform report to review comments'
               run: |
-                  echo "`jq -c 'map({path: (.File | split("${{ github.event.repository.name }}/")[2]), position: .Line, body: (.Description + " (" + .Engine + " - " + .Rule + " - " + "Severity: " + .Severity + ")")})' report.json`" > comments.json
+                  echo "`jq -c 'map({path: (.File | split("${{ github.event.repository.name }}/")[2]), position: .Line, severity: .Severity, body: (.Description + " (" + .Engine + " - " + .Rule + " - " + "Severity: " + .Severity + ")")})' report.json`" > comments.json
 
             - name: 'Find Git Diff lines'
               run: |
@@ -52,9 +52,22 @@ jobs:
               run: |
                   node ./scripts/node/lines.js diffLines.txt comments.json
 
+            # Severity 3 = REQUEST_CHANGES, SEVERITY 1 = APPROVE else COMMENT
+            - name: 'Evaluate Approval'
+              run: |
+                  node ./scripts/node/approval.js comments.json 3 1
+
             - name: Read Comments File
               id: getcomments
               run: echo "::set-output name=comments::$(cat comments.json)"
+
+            - name: Read Review Event File
+              id: getevent
+              run: echo "::set-output name=event::$(cat reviewEvent.txt)"
+
+            - name: Read Review Body File
+              id: getbody
+              run: echo "::set-output name=body::$(cat reviewbody.txt)"
 
             - name: 'Create Review'
               uses: octokit/request-action@v2.x
@@ -62,8 +75,8 @@ jobs:
                   route: POST /repos/{repo}/pulls/{pull_number}/reviews
                   repo: ${{ github.repository }}
                   pull_number: ${{ github.event.number }}
-                  body: 'Static analysis review'
-                  event: 'COMMENT'
+                  body: '${{ steps.getcomments.outputs.body }}'
+                  event: '${{ steps.getcomments.outputs.event }}'
                   comments: '${{ steps.getcomments.outputs.comments }}'
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
