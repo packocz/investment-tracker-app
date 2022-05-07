@@ -9,6 +9,12 @@ jobs:
         name: ReviewSource
         runs-on: 'ubuntu-latest'
         steps:
+            - name: Clone Repository (Latest)
+              uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
+                  ref: ${{ github.event.inputs.ref }}
+
             - name: Code Review
               uses: packocz/sfdx-code-review-action@main
               with:
