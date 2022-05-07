@@ -19,3 +19,4 @@ jobs:
               uses: packocz/sfdx-code-review-action@main
               with:
                   reject_threshold: 3
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
