@@ -42,7 +42,15 @@ jobs:
 
             - name: 'Transform report to review comments'
               run: |
-                  echo "`jq -c 'map({path: (.File | split("${{ github.event.repository.name }}/")[2]), position: 1, body: ("(Line: " + .Line + ") " + .Description + " (" + .Engine + " - " + .Rule + " - " + "Severity: " + .Severity + ")")})' report.json`" > comments.json
+                  echo "`jq -c 'map({path: (.File | split("${{ github.event.repository.name }}/")[2]), position: " + .Line + ", body: (.Description + " (" + .Engine + " - " + .Rule + " - " + "Severity: " + .Severity + ")")})' report.json`" > comments.json
+
+            - name: 'Find Git Diff lines'
+              run: |
+                  ./scripts/bash/git-diff-changed-lines.sh ${{ github.base_ref }}..${{ github.head_ref }} > diffLines.txt
+
+            - name: 'Translate Line to Position and filter issues outside diff'
+              run: |
+                  node ./scripts/node/lines.js diffLines.txt comments.json
 
             - name: Read Comments File
               id: getcomments
