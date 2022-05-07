@@ -10,6 +10,6 @@ jobs:
         runs-on: 'ubuntu-latest'
         steps:
             - name: Code Review
-              uses: actions/javascript-action@main
+              uses: ./
               with:
                   reject_threshold: 3
