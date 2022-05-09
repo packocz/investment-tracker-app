@@ -22,7 +22,7 @@ function getLineToPositionMaps(diffLines) {
 	let lines = diffLines.split('\n');
 	let fileToLineMaps = new Map();
 	let currentFileName;
-	let currentIndex = 3; //diff hunk shows 2 lines before the change
+	let currentIndex = 4; //diff hunk shows 2 lines before the change
 	lines.forEach((oneLine) => {
 		let fileAndLines = oneLine.split(':');
 		let linesInHunk;
@@ -30,7 +30,7 @@ function getLineToPositionMaps(diffLines) {
 		if (fileAndLines.length === 2) {
 			//new file
 			currentFileName = fileAndLines[0];
-			currentIndex = 3; //diff hunk shows 2 lines before the change
+			currentIndex = 4; //diff hunk shows 2 lines before the change
 			linesInHunk = fileAndLines[1].split(',');
 			fileLineMap = new Map();
 		} else {
@@ -41,8 +41,11 @@ function getLineToPositionMaps(diffLines) {
 		}
 
 		linesInHunk.forEach((lineNumber) => {
+			console.log(currentFileName + ' - ' + lineNumber);
 			let lineNumberInteger = parseInt(lineNumber);
-			fileLineMap.set(lineNumberInteger, currentIndex++);
+			if (lineNumberInteger) {
+				fileLineMap.set(lineNumberInteger, currentIndex++);
+			}
 		});
 		fileToLineMaps.set(currentFileName, fileLineMap);
 	});
@@ -54,6 +57,7 @@ function filterAndTranslatePositionReviewComments(allComments, positionMaps) {
 	let relevantComments = [];
 
 	allComments.forEach((comment) => {
+		console.log(comment);
 		let line = parseInt(comment.position);
 		let filename = comment.path;
 		if (!positionMaps.has(filename)) {
@@ -100,9 +104,9 @@ if (approveThreshold && maxSeverity <= approveThreshold) {
 	}
 } else if (commentCount > 0 && rejectTreshold && maxSeverity >= rejectTreshold) {
 	reviewEvent = 'REQUEST_CHANGES';
-	reviewText = `At least ${needsRework} of the ${commentCount} rule violations identified by the Salesforce Code Analyzer require rework. Max severity found: ${maxSeverity}. `;
+	reviewText = `At least ${needsRework} of the ${commentCount} rule violations identified by the Salesforce Code Analyzer require rework. Highest severity found was ${maxSeverity}. `;
 } else if (commentCount > 0) {
-	reviewText = `Salesforce Code Analyzer identified ${commentCount} rule violations in your changes with severity as high as: ${maxSeverity}. `;
+	reviewText = `Salesforce Code Analyzer identified ${commentCount} rule violations in your changes with severity as high as ${maxSeverity}. `;
 }
 
 fs.writeFileSync('reviewEvent.txt', reviewEvent);

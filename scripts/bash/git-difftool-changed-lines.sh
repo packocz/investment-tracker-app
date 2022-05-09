@@ -4,9 +4,9 @@
 # `git difftool --extcmd=/path/to/git-difftool-changed-lines.sh`
 
 # Outputs the lines numbers of the new file
-# that are not present in the old file.
-# That is, outputs line numbers for new lines and changed lines
-# and does not output line numbers deleted or unchanged lines.
+# that are not present in the old file and
+# Line numbers in the old files that are not
+# in the new file
 
 # FORMAT: One file per line
 # FILE:LINE_NUMBERS
@@ -14,10 +14,11 @@
 
 
 args=(
-	# Don't output info for old (deleted) or unchanged (context) lines
-	--old-group-format="" --unchanged-group-format=""
+	# Don't output info for unchanged (context) lines
+	--unchanged-group-format=""
 
-	# For new and changed lines, output one LINE_RANGE per line
+	# For deleted, new and changed lines, output one LINE_RANGE per line
+    --old-group-format="%dF-%dL%c'\012'" 
 	--new-group-format="%dF-%dL%c'\012'"
 	--changed-group-format="%dF-%dL%c'\012'"
 )
