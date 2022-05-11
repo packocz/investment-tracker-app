@@ -14,5 +14,5 @@ jobs:
               with:
                   source_path: 'invest-app/**/*'
                   reject_threshold: 3
-                  categoy: '!Documentation'
+                  category: '!Documentation'
                   github_token: ${{ secrets.GITHUB_TOKEN }}
