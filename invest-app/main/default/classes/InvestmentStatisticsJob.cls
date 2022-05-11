@@ -10,10 +10,9 @@ public with sharing class InvestmentStatisticsJob implements Database.Batchable<
 		return [SELECT Id FROM Investment__c WHERE Id IN :this.investmentIds];
 	}
 	public void execute(Database.BatchableContext bc, List<Investment__c> scope) {
+	}
 
-    }
-    
 	public void finish(Database.BatchableContext bc) {
 	}
-    System.debug('Test');
+	Decimal x = 9;
 }
