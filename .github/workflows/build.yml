@@ -4,6 +4,9 @@ on:
     pull_request:
         types: [opened, synchronize, reopened]
         branches: [main]
+    push:
+        branches:
+            - main
 jobs:
     deploy:
         name: ValidateSource
@@ -38,7 +41,7 @@ jobs:
               run: sfdx force:source:push
 
             - name: 'Run Tests'
-              run: sfdx force:apex:test:run --testlevel=RunLocalTests --codecoverage --resultformat=json --outputdir=testrun
+              run: sfdx force:apex:test:run --testlevel=RunLocalTests --codecoverage --resultformat=json --outputdir=./tests/apex
 
             - name: 'Delete Scratch Org'
               run: sfdx force:org:delete --targetusername=testorg --noprompt
