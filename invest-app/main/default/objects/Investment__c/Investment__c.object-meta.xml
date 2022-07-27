@@ -163,7 +163,6 @@
     <searchLayouts>
         <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
         <excludedStandardButtons>Accept</excludedStandardButtons>
-        <excludedStandardButtons>IsotopeSubscription</excludedStandardButtons>
         <excludedStandardButtons>MassChangeOwner</excludedStandardButtons>
         <excludedStandardButtons>PrintableListView</excludedStandardButtons>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
