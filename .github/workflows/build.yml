@@ -41,7 +41,26 @@ jobs:
               run: sfdx force:source:push
 
             - name: 'Run Tests'
-              run: sfdx force:apex:test:run --testlevel=RunLocalTests --codecoverage --resultformat=json --outputdir=./tests/apex
+              run: echo "::set-output name=test-job-id::$(sfdx force:apex:test:run --testlevel=RunLocalTests --codecoverage --resultformat=json --outputdir=./tests/apex | jq -r '.result.summary.testRunId)"
+
+            - name: 'Populate auth file with TestDashboard secret'
+              shell: bash
+              run: |
+                  echo ${{ secrets.TEST_DASHBOARD}} > ./TEST_DASHBOARD.txt
+                  secretFileSize=$(wc -c "./TEST_DASHBOARD.txt" | awk '{print $1}')
+                  if [ $secretFileSize == 1 ]; then
+                      echo "Missing TEST_DASHBOARD secret.";
+                      exit 1;
+                  fi
+
+            - name: 'Authenticate Test Dashboard'
+              run: sfdx auth:sfdxurl:store -f ./TEST_DASHBOARD.txt -a test-dashboard
+
+            - name: 'Record Test Run Results'
+              run: ./scripts/bash/import-test-result.sh --testrunid ${{ steps.getcomments.outputs.test-job-id }} --targetusername test-dashboard
+
+            - name: 'Record Test Results'
+              run: ./scripts/bash/import-test-run.sh --testrunid ${{ steps.getcomments.outputs.test-job-id }} --targetusername test-dashboard
 
             - name: 'Delete Scratch Org'
               run: sfdx force:org:delete --targetusername=testorg --noprompt
