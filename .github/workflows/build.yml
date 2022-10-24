@@ -52,10 +52,10 @@ jobs:
               run: echo "The test job id ${{ steps.run-tests-step.outputs.TEST-JOB-ID }}"
 
             - name: 'Record Test Run Results'
-              run: ./scripts/bash/import-test-result.sh --testrunid ${{ steps.run-tests-step.outputs.TEST-JOB-ID }} --targetusername test-dashboard
+              run: ./scripts/bash/import-test-result.sh --testrunid ${{ steps.run-tests-step.outputs.TEST-JOB-ID }} --targetusername test-dashboard --sourceusername test-dashboard
 
             - name: 'Record Test Results'
-              run: ./scripts/bash/import-test-run.sh --testrunid ${{ steps.run-tests-step.outputs.TEST-JOB-ID }} --targetusername test-dashboard
+              run: ./scripts/bash/import-test-run.sh --testrunid ${{ steps.run-tests-step.outputs.TEST-JOB-ID }} --targetusername test-dashboard --sourceusername test-dashboard
 
             - name: 'Create Scratch Org'
               run: sfdx force:org:create -f config/project-scratch-def.json -a testorg -d 1 -s -v devhub
