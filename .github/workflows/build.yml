@@ -41,7 +41,7 @@ jobs:
               run: sfdx force:source:push
 
             - name: 'Run Tests'
-              run: echo "::set-output name=test-job-id::$(sfdx force:apex:test:run --testlevel=RunLocalTests --codecoverage --resultformat=json --outputdir=./tests/apex | jq -r '.result.summary.testRunId)"
+              run: echo "::set-output name=test-job-id::$(sfdx force:apex:test:run --testlevel=RunLocalTests --codecoverage --resultformat=json --outputdir=./tests/apex | jq -r '.result.summary.testRunId')"
 
             - name: 'Populate auth file with TestDashboard secret'
               shell: bash
