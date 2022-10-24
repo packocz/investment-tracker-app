@@ -8,6 +8,7 @@ data/real
 # Salesforce cache
 .sfdx/
 .localdevserver/
+.sf
 
 # LWC VSCode autocomplete
 **/lwc/jsconfig.json
