@@ -39,7 +39,7 @@ if [[ -z $RUN_ID ]]; then
     SOURCE_QUERY="$SOURCE_QUERY WHERE ApexTestRunResult.Status = 'Completed'"
 else
     echo "Getting Test Results for Job Id $RUN_ID"
-    SOURCE_QUERY="$SOURCE_QUERY WHERE ApexTestRunResultId = '$RUN_ID'"
+    SOURCE_QUERY="$SOURCE_QUERY WHERE ApexTestRunResult.AsyncApexJobId = '$RUN_ID'"
 fi;
 SOURCE_CMD="sfdx force:data:soql:query --query=\"$SOURCE_QUERY\" --resultformat=csv"
 if [[ -z $FROM_ORG ]]; then
