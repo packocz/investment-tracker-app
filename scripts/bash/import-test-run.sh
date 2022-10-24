@@ -7,15 +7,11 @@ set -o xtrace
 
 POSITIONAL=()
 
-ALIAS="investments"
-DAYS=7
-DEFINITION="config/project-scratch-def.json"
-
 while [[ $# -gt 0 ]]; do
   key="$1"
 
   case ${key} in
-  -s | --targetsourceusername)
+  -s | --sourceusername)
     FROM_ORG="$2"
     shift
     shift

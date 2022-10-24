@@ -48,6 +48,9 @@ jobs:
               id: run-tests-step
               run: echo "TEST-JOB-ID=$(sfdx force:apex:test:run --testlevel=RunLocalTests --codecoverage --resultformat=json --targetusername=test-dashboard --outputdir=./tests/apex | jq -r '.result.summary.testRunId')" >> $GITHUB_OUTPUT
 
+            - name: 'Echo'
+              run: echo "The test job id ${{ steps.run-tests-step.outputs.TEST-JOB-ID }}"
+
             - name: 'Record Test Run Results'
               run: ./scripts/bash/import-test-result.sh --testrunid ${{ steps.run-tests-step.outputs.TEST-JOB-ID }} --targetusername test-dashboard
 
