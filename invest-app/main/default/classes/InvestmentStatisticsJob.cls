@@ -2,6 +2,8 @@ public with sharing class InvestmentStatisticsJob implements Database.Batchable<
 	private Date startDate;
 	private List<Id> investmentIds;
 
+	public String unusedProperty;
+
 	public InvestmentStatisticsJob(Date startDate, List<Id> investmentIds) {
 		this.startDate = startDate;
 		this.investmentIds = investmentIds;
