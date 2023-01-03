@@ -17,7 +17,6 @@ public with sharing class TA_InvestmentUpdate_UpdateStatistics implements packoc
 				this.fromDate = iu.DateOfUpdate__c;
 			}
 		}
-		System.debug('test');
 		executeJobs();
 	}
 
@@ -47,7 +46,6 @@ public with sharing class TA_InvestmentUpdate_UpdateStatistics implements packoc
 				this.fromDate = iu.DateOfUpdate__c;
 			}
 		}
-		System.debug('test');
 		executeJobs();
 	}
 

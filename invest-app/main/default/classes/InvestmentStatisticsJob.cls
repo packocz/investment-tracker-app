@@ -16,5 +16,4 @@ public with sharing class InvestmentStatisticsJob implements Database.Batchable<
 
 	public void finish(Database.BatchableContext bc) {
 	}
-	Decimal x = 9;
 }

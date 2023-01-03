@@ -4,7 +4,6 @@ public with sharing class InvestmentService {
 
 	public InvestmentService(Id investmentId) {
 		this.investmentId = investmentId;
-		System.debug('some test');
 		this.investment = [
 			SELECT
 				Id,

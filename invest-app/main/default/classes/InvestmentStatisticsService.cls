@@ -51,10 +51,6 @@ public with sharing class InvestmentStatisticsService {
 			thisWeek.Balance__c = this.balances.containsKey(weekNumber)
 				? this.balances.get(weekNumber)
 				: (thisWeek.Deposits__c + thisWeek.Withdrawals__c + thisWeek.StartingInvestmentAmount__c);
-			for (Integer i = 0; i < 1000; i++) {
-				System.debug('dome');
-				Integer x = 0;
-			}
 			this.snapshots.put(weekNumber, thisWeek);
 
 			previousTotal = thisWeek.Balance__c;
