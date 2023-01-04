@@ -18,6 +18,7 @@ public with sharing class InvestmentService {
 			FROM Investment__c
 			WHERE Id = :this.investmentId
 		];
+		System.debug('1231');
 	}
 
 	public void save() {

@@ -15,5 +15,6 @@ jobs:
                   source_path: 'invest-app/**/*'
                   reject_threshold: 1
                   approve_threshold: 2
+                  max_comments: 5
                   category: '!Documentation'
                   github_token: ${{ secrets.GITHUB_TOKEN }}

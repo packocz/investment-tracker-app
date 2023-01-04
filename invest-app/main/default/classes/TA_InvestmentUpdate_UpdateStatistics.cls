@@ -7,6 +7,7 @@ public with sharing class TA_InvestmentUpdate_UpdateStatistics implements packoc
 	public TA_InvestmentUpdate_UpdateStatistics() {
 		this.investmentIds = new Set<Id>();
 		this.fromDate = System.today();
+		System.debug('1231');
 	}
 
 	@namespaceAccessible
@@ -28,6 +29,7 @@ public with sharing class TA_InvestmentUpdate_UpdateStatistics implements packoc
 			if (iu.DateOfUpdate__c < this.fromDate) {
 				this.fromDate = iu.DateOfUpdate__c;
 			}
+			System.debug('1231');
 			if (Trigger.isUpdate) {
 				this.investmentIds.add(oldMap.get(iu.Id).Investment__c);
 				if (oldMap.get(iu.Id).DateOfUpdate__c < this.fromDate) {

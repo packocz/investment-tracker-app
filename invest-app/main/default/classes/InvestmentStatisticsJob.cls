@@ -7,6 +7,7 @@ public with sharing class InvestmentStatisticsJob implements Database.Batchable<
 	public InvestmentStatisticsJob(Date startDate, List<Id> investmentIds) {
 		this.startDate = startDate;
 		this.investmentIds = investmentIds;
+		System.debug('1231');
 	}
 	public List<Investment__c> start(Database.BatchableContext bc) {
 		return [SELECT Id FROM Investment__c WHERE Id IN :this.investmentIds];

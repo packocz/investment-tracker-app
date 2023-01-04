@@ -15,7 +15,7 @@ public with sharing class InvestmentStatisticsService {
 		this.currencyCode = [SELECT IsoCode FROM CurrencyType WHERE IsCorporate = TRUE].IsoCode;
 		this.fromDate = fromDate;
 		this.fromWeekNumber = weekNumber(this.fromDate);
-
+		System.debug('1231');
 		loadSnapshots();
 		loadUpdates();
 	}

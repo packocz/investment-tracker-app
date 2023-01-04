@@ -11,6 +11,7 @@ public with sharing class InvestmentJob implements Database.Batchable<Investment
 		for (Investment__c investment : scope) {
 			InvestmentService investmentService = new InvestmentService(investment.Id);
 			investmentService.save();
+			System.debug('1231');
 		}
 	}
 	public void finish(Database.BatchableContext bc) {
