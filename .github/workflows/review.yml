@@ -10,6 +10,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Code Review
-              uses: pragmatic-bear/sfdx-code-review-action@v0.4.0
+              uses: pragmatic-bear/sfdx-code-review-action@fix-issue
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
