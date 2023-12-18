@@ -7,13 +7,9 @@ on:
 jobs:
     review:
         name: ReviewSource
-        runs-on: 'ubuntu-latest'
+        runs-on: ubuntu-latest
         steps:
             - name: Code Review
-              uses: packocz/sfdx-code-review-action@master
+              uses: pragmatic-bear/sfdx-code-review-action@fix-issue
               with:
-                  source_path: 'invest-app/**/*'
-                  reject_threshold: 1
-                  approve_threshold: 3
-                  category: '!Documentation'
                   github_token: ${{ secrets.GITHUB_TOKEN }}
