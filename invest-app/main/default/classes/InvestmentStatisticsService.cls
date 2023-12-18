@@ -31,6 +31,7 @@ public with sharing class InvestmentStatisticsService {
 
 		Decimal previousTotal;
 		while (weekNumber <= lastWeekNumber) {
+			System.debug('test');
 			InvestmentSnapshot__c thisWeek = this.snapshots.containsKey(weekNumber)
 				? this.snapshots.get(weekNumber)
 				: new InvestmentSnapshot__c(

@@ -7,12 +7,9 @@ on:
 jobs:
     review:
         name: ReviewSource
-        runs-on: 'ubuntu-latest'
+        runs-on: ubuntu-latest
         steps:
             - name: Code Review
-              uses: packocz/sfdx-code-review-action@feature/fix-output
+              uses: pragmatic-bear/sfdx-code-review-action@v0.5.1
               with:
-                  source_path: '"***.cls" "***.trigger" "***.js" "***.html" "***.page" "***.cmp" "***.component"'
-                  category: '!Documentation'
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  min_severity: 2

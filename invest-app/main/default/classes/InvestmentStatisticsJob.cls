@@ -7,6 +7,7 @@ public with sharing class InvestmentStatisticsJob implements Database.Batchable<
 		this.investmentIds = investmentIds;
 	}
 
+
 	public List<Investment__c> start(Database.BatchableContext bc) {
 		return [SELECT Id FROM Investment__c WHERE Id IN :this.investmentIds];
 	}
@@ -16,7 +17,6 @@ public with sharing class InvestmentStatisticsJob implements Database.Batchable<
 			InvestmentStatisticsService stats = new InvestmentStatisticsService(investment.Id, this.startDate);
 			stats.process();
 			stats.save();
-			System.debug('test');
 		}
 	}
 
